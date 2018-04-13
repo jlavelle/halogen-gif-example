@@ -42,7 +42,7 @@ ui =
   render st = 
     HH.div_
       [ HH.h1_ 
-          [HH.text "Halogen Gif Viewer!"]
+          [ HH.text "Halogen Gif Viewer!" ]
       , HH.div_
         [ HH.p_ 
             [ HH.text $ "Current topic: " <> st.topic ]
@@ -52,15 +52,14 @@ ui =
             , HP.value st.topic
             ]
         , HH.button
-            [ HE.onClick $ HE.input_ LoadGif]
-            [ HH.text "Load Gif"]
+            [ HE.onClick $ HE.input_ LoadGif ]
+            [ HH.text "Load Gif" ]
         ]
-      , HH.div_ [
-          HH.img 
-            [HP.src st.gifUrl]
-      ]
-      , if st.loading then HH.p_ [HH.text "Loading..."] else HH.p_ []
-      , HH.p_ [HH.text st.errorMessage]
+      , HH.div_ 
+          [ HH.img [ HP.src st.gifUrl ] ]
+      , if st.loading then HH.p_ [ HH.text "Loading..." ] else HH.p_ []
+      , HH.p_ 
+          [ HH.text st.errorMessage ]
       ]
 
   eval :: Query ~> H.ComponentDSL State Query Void (Aff (ajax :: AX.AJAX | eff))
