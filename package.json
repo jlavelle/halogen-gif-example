@@ -2,19 +2,15 @@
   "name": "halogen-gifs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "Main.purs",
   "dependencies": {},
   "devDependencies": {
     "xhr2": "^0.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pulp build --to dist/example.js",
     "build:watch": "pulp -w build --to dist/example.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "John C. Lavelle",
+  "license": "MIT"
 }
